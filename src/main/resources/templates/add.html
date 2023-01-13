@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{/add.css}" rel="stylesheet" />
+</head>
+<body>
+	<form th:action="@{/insert}" method="post">
+		<p>
+			<label for="post_title">Title</label>
+			<input id="post_title" type="text" name="post_title"/>
+		</p>
+		<p>
+			<label for="post_content">Content</label>
+			<textarea id="post_content" name="post_content"></textarea>
+		</p>
+		<p>
+			<button type="submit">Submit</button>
+		</p>
+	</form>
+</body>
+</html>

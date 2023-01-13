@@ -4,17 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <title>Simple-Board</title>
+<link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
 <body>
 	<div class="wrap">
-		<table>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Content</th>
+					<th>RegDate</th>
+					<th></th>
+				</tr>
+			</thead>
 			<tbody>
-				<tr class="post-cell">
-					<th class="post-cell__idx">1</th>
-					<td class="post-cell__title">Title</td>
-					<td class="post-cell__content">Content</td>
-					<td class="post-cell__regdate">2023-01-01 00:00</td>
+				<tr class="post-cell" th:each="p : ${postList}">
+					<td class="post-cell__idx" th:text="${p.id}">1</td>
+					<td class="post-cell__title"><a th:href="@{/post(id=${p.id})}" th:text="${p.title}">Title</a></td>
+					<td class="post-cell__content" th:text="${p.content}">Content</td>
+					<td class="post-cell__regdate" th:text="${p.regDate}">2023-01-01 00:00</td>
+					<td class="post-cell__edit"><a th:href="@{/edit(id=${p.id})}">edit</a></td>
 				</tr>
 			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="5">
+						<a class="add-post" th:href="@{/add}">add post</a>
+					</td>
+				</tr>
+			</tfoot>
 		</table>
 	</div>
 </body>

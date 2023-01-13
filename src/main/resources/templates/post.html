@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{/post.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="post">
+		<div class="post__title">
+			<h1 th:utext="${post.title}"></h1>
+		</div>
+		<div class="post__reg-date">
+			<p th:text="${post.regDate}"></p>
+		</div>
+		<hr/>
+		<div class="post__content">
+			<p th:utext="${post.content}"></p>
+		</div>
+		<div class="post__btns">
+			<a th:href="@{/edit(id=${post.id})}">Edit</a>
+			<a th:href="@{/delete(id=${post.id})}">Delete</a>
+		</div>
+	</div>
+</body>
+</html>
