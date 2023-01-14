@@ -19,6 +19,11 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr th:if="${postList.isEmpty}" class="post-empty">
+					<td colspan="5">
+						No Post
+					</td>
+				</tr>
 				<tr class="post-cell" th:each="p : ${postList}">
 					<td class="post-cell__idx" th:text="${p.id}">1</td>
 					<td class="post-cell__title"><a th:href="@{/post(id=${p.id})}" th:text="${p.title}">Title</a></td>
@@ -30,7 +35,7 @@
 			<tfoot>
 				<tr>
 					<td colspan="5">
-						<a class="add-post" th:href="@{/add}">add post</a>
+						<a class="add-post" th:href="@{/add}">New Post</a>
 					</td>
 				</tr>
 			</tfoot>

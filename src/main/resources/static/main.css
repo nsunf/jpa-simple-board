@@ -31,3 +31,10 @@ td {
 	float: right;
 	padding: 8px 16px;
 }
+
+.post-empty {
+	text-align: center;
+	font-weigth: bold;
+	font-size: 20px;
+	line-height: 40px;
+}

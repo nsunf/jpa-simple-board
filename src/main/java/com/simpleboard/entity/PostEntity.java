@@ -9,21 +9,22 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
+@Table(name = "post")
 @Getter
 @Setter
 @ToString
-public class Post {
+public class PostEntity {
 	@Id
 	@Column(name = "post_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long id;
+	private Long id;
 
 	@Column(name = "post_title")
-	public String title;
+	private String title;
 	
 	@Column(name = "post_content")
-	public String content;
+	private String content;
 	
 	@Column(name = "post_regdate")
-	public Date regDate;
+	private Date regDate;
 }

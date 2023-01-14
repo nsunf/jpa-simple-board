@@ -6,11 +6,11 @@
 <link th:href="@{/modify.css}" rel="stylesheet" />
 </head>
 <body>
-	<form th:action="@{/modi}" method="post">
-		<input type="hidden" th:value="${post.id}"/>
+	<form th:action="@{/update}" method="post">
+		<input type="hidden" th:value="${post.id}" name="post_id"/>
 		<p>
 			<label for="post_title">Title</label>
-			<input id="post_title" type="text" name="post_title" th:value="${post.title}" required/>
+			<input id="post_title" type="text" name="post_title" th:value="${post.title}" required autofocus/>
 		</p>
 		<p>
 			<label for="post_content">Content</label>

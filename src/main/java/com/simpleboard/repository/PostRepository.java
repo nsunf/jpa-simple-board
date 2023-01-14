@@ -2,8 +2,8 @@ package com.simpleboard.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.simpleboard.entity.Post;
+import com.simpleboard.entity.PostEntity;
 
-public interface PostRepository extends JpaRepository<Post, Long> {
+public interface PostRepository extends JpaRepository<PostEntity, Long> {
 
 }
