@@ -15,7 +15,7 @@
 		</div>
 		<hr/>
 		<div class="post__content">
-			<p th:utext="${post.content}"></p>
+			<textarea th:utext="${post.content}" readonly></textarea>
 		</div>
 		<div class="post__btns">
 			<a th:href="@{/edit(id=${post.id})}">Edit</a>

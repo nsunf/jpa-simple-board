@@ -26,8 +26,8 @@
 				</tr>
 				<tr class="post-cell" th:each="p : ${postList}">
 					<td class="post-cell__idx" th:text="${p.id}">1</td>
-					<td class="post-cell__title"><a th:href="@{/post(id=${p.id})}" th:text="${p.title}">Title</a></td>
-					<td class="post-cell__content" th:text="${p.content}">Content</td>
+					<td class="post-cell__title"><a th:href="@{/post(id=${p.id})}" th:utext="${p.title}">Title</a></td>
+					<td class="post-cell__content" th:utext="${p.content}">Content</td>
 					<td class="post-cell__regdate" th:text="${p.regDate}">2023-01-01 00:00</td>
 					<td class="post-cell__edit"><a th:href="@{/edit(id=${p.id})}">edit</a></td>
 				</tr>
